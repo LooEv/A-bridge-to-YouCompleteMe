@@ -16,17 +16,18 @@
 git clone https://git.coding.net/looq/YouCompleteMe_byme.git ~/
 cd ~/.vim/bundle
 tar -zxf ~/YouCompleteMe_byme/YouCompleteMe.tar.gz
-cd YouCompleteMe
 ```
 编译YCM，如果需要对C家族的语言进行语义补全支持（有点耗时）：
 ```bash
+cd YouCompleteMe
 ./install.py --clang-completer
 ```
 如果不需要对C家族的语言进行语义补全支持：
 ```bash
+cd YouCompleteMe
 ./install.py
 ```
-或者使用参数 `--all` 添加所有的补全，包括(c/c++ c# go python php等)
+或者使用参数 `--all` 添加所有的补全，包括(c/c++ c# go python php等)。
 关于编译，如有疑问，请围观 [YouCompleteMe 官方git仓库](https://github.com/Valloric/YouCompleteMe)。
 等待编译结束，然后在 vim 中重新执行如下命令：
 ```bash
