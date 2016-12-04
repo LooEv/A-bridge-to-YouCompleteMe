@@ -8,9 +8,9 @@
 ```
 
 ## 如果你还是没有安装成功
-我利用 vps 定时 clone 最新的 YouCompleteMe.git，然后打包，将整个文件 YouCompleteMe.tar.gz 推送至国内的 [coding.net](https://coding.net/)。我们在国内 clone coding.net 的 git 仓库就快多了，希望对你有帮助。
+我利用国外的 vps 定时 clone 最新的 YouCompleteMe.git，然后打包，将整个文件 YouCompleteMe.tar.gz 推送至国内的 [coding.net](https://coding.net/)。我们在国内 clone coding.net 的 git 仓库就快多了，希望对你有帮助。
 
-## 使用方法
+## **使用方法**
 **注意**：你 clone 的是国内 coding.net 的 git 仓库，不是你现在看的这个仓库，别搞错了。
 ```bash
 git clone https://git.coding.net/looq/YouCompleteMe_byme.git ~/
@@ -26,6 +26,7 @@ cd YouCompleteMe
 ```bash
 ./install.py
 ```
+或者使用参数 `--all` 添加所有的补全，包括(c/c++ c# go python php等)
 关于编译，如有疑问，请围观 [YouCompleteMe 官方git仓库](https://github.com/Valloric/YouCompleteMe)。
 等待编译结束，然后在 vim 中重新执行如下命令：
 ```bash
