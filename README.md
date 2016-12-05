@@ -13,7 +13,7 @@
 ## **使用方法**
 **注意**：你 clone 的是国内 coding.net 的 git 仓库，不是你现在看的这个仓库，别搞错了。
 ```bash
-git clone https://git.coding.net/looq/YouCompleteMe_byme.git ~/
+git clone https://git.coding.net/looq/YouCompleteMe_byme.git ~/YouCompleteMe_byme
 cd ~/.vim/bundle
 tar -zxf ~/YouCompleteMe_byme/YouCompleteMe.tar.gz
 ```
