@@ -8,24 +8,25 @@
 ```
 
 ## 如果你还是没有安装成功
-我利用国外的 vps 定时 clone 最新的 YouCompleteMe.git，然后打包，将整个文件 YouCompleteMe.tar.gz 推送至国内的 [coding.net](https://coding.net/)。我们在国内 clone coding.net 的 git 仓库就快多了，希望对你有帮助。
+我利用国外的 vps 定时 clone 最新的 YouCompleteMe.git，然后打包，将整个文件 YouCompleteMe.tar.gz 上传至国内的 [七牛云](https://www.qiniu.com/)。我们在国内下载七牛云上面的资源相当快，希望对你有所帮助。
 
 ## **使用方法**
 **注意**：你 clone 的是国内 coding.net 的 git 仓库，不是你现在看的这个仓库，别搞错了。
 ```bash
-git clone https://git.coding.net/looq/YouCompleteMe_byme.git ~/YouCompleteMe_byme
-cd ~/.vim/bundle
-tar -zxf ~/YouCompleteMe_byme/YouCompleteMe.tar.gz
+$ wget -O ~/YouCompleteMe.tar.gz "http://ohpunyak1.bkt.clouddn.com/YouCompleteMe.tar.gz?v=9999"
+$ cd ~/.vim/bundle
+$ tar -zxf ~/YouCompleteMe.tar.gz
 ```
+（为什么要在 YouCompleteMe.tar.gz 文件名后面加上 `?v=9999` 呢？原因请见该文章的 [额外说明](http://threehao.com/2016/08/22/Github%20Pages%20+%20Hexo/) ）
 编译YCM，如果需要对C家族的语言进行语义补全支持（有点耗时）：
 ```bash
-cd YouCompleteMe
-./install.py --clang-completer
+$ cd YouCompleteMe
+$ ./install.py --clang-completer
 ```
 如果不需要对C家族的语言进行语义补全支持：
 ```bash
-cd YouCompleteMe
-./install.py
+$ cd YouCompleteMe
+$ ./install.py
 ```
 或者使用参数 `--all` 添加所有的补全，包括(c/c++ c# go python php等)。
 关于编译，如有疑问，请围观 [YouCompleteMe 官方git仓库](https://github.com/Valloric/YouCompleteMe)。
@@ -36,4 +37,20 @@ cd YouCompleteMe
 vim 会很快提示你已经安装好 YouCompleteMe 插件。
 
 ## 声明
-此 git 仓库的 README.md 文件很少会更新，但是 [YouCompleteMe_byme](https://git.coding.net/looq/YouCompleteMe_byme.git) 这个 git 仓库会经常更新，具体可以查看该仓库的 commits 信息。
+此 git 仓库的 README.md 文件很少会更新，但是七牛云上面的 YouCompleteMe.tar.gz 会经常更新，确保与 YouCompleteMe 官方git仓库保持一致。
+
+
+我的网络带宽也不算好，但是我测试了一下，下载速度还是相当令人满意：
+```bash
+$ wget http://ohpunyak1.bkt.clouddn.com/YouCompleteMe.tar.gz
+--2016-12-06 10:03:31--  http://ohpunyak1.bkt.clouddn.com/YouCompleteMe.tar.gz
+Resolving ohpunyak1.bkt.clouddn.com (ohpunyak1.bkt.clouddn.com)... 117.23.1.26, 125.64.133.135, 182.135.132.138, ...
+Connecting to ohpunyak1.bkt.clouddn.com (ohpunyak1.bkt.clouddn.com)|117.23.1.26|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 143262975 (137M) [application/x-gzip]
+Saving to: ‘YouCompleteMe.tar.gz’
+
+25% [=============>                                         ] 36,639,259  1.89MB/s  eta 44s
+```
+
+Ps: 我只是个大自然和 YouCompleteMe 的搬运工。
