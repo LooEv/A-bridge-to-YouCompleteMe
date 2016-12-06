@@ -17,7 +17,7 @@ $ wget -O ~/YouCompleteMe.tar.gz "http://ohpunyak1.bkt.clouddn.com/YouCompleteMe
 $ cd ~/.vim/bundle
 $ tar -zxf ~/YouCompleteMe.tar.gz
 ```
-（为什么要在 YouCompleteMe.tar.gz 文件名后面加上 `?v=9999` 呢？原因请见该文章的 [额外说明](http://threehao.com/2016/08/22/Github%20Pages%20+%20Hexo/) ）
+（为什么要在 YouCompleteMe.tar.gz 文件名后面加上 `?v=9999` 呢？原因请见这篇链接文章的 [额外说明](http://threehao.com/2016/08/22/Github%20Pages%20+%20Hexo/) ）
 编译YCM，如果需要对C家族的语言进行语义补全支持（有点耗时）：
 ```bash
 $ cd YouCompleteMe
