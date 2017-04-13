@@ -11,7 +11,6 @@
 我利用国外的 vps 定时 clone 最新的 YouCompleteMe.git，然后打包，将整个文件 YouCompleteMe.tar.gz 上传至国内的 [七牛云](https://www.qiniu.com/)。我们在国内下载七牛云上面的资源相当快，希望对你有所帮助。
 
 ## **使用方法**
-**注意**：你 clone 的是国内 coding.net 的 git 仓库，不是你现在看的这个仓库，别搞错了。
 ```bash
 $ wget -O ~/YouCompleteMe.tar.gz "http://ohpunyak1.bkt.clouddn.com/YouCompleteMe.tar.gz?v=9999"
 $ cd ~/.vim/bundle
