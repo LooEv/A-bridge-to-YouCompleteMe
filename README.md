@@ -12,11 +12,16 @@
 
 ## **使用方法**
 ```bash
-$ wget -O ~/YouCompleteMe.tar.gz "http://ohpunyak1.bkt.clouddn.com/YouCompleteMe.tar.gz?v=9999"
+$ wget -O ~/YouCompleteMe.tar.gz "http://ohpunyak1.bkt.clouddn.com/YouCompleteMe.tar.gz"
 $ cd ~/.vim/bundle
 $ tar -zxf ~/YouCompleteMe.tar.gz
 ```
-（为什么要在 YouCompleteMe.tar.gz 文件名后面加上 `?v=9999` 呢？原因请见这篇链接文章的 [额外说明](http://threehao.com/2016/08/22/Github%20Pages%20+%20Hexo/) ）
+如果你已经下载过一次YouCompleteMe.tar.gz了，然后想要更新压缩文件，运行下面的命令
+```bash
+$ wget -O ~/YouCompleteMe.tar.gz "http://ohpunyak1.bkt.clouddn.com/YouCompleteMe.tar.gz?v=1234"
+```
+这是CDN缓存引起的问题，详见[关于七牛CDN缓存问题的处理方式](http://cnodejs.org/topic/56fc05708265278d59c7e34c)
+
 编译YCM，如果需要对C家族的语言进行语义补全支持（有点耗时）：
 ```bash
 $ cd YouCompleteMe
