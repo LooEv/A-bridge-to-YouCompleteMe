@@ -8,19 +8,16 @@
 ```
 
 ## 如果你还是没有安装成功
-我利用国外的 vps 定时 clone 最新的 YouCompleteMe.git，然后打包，将整个文件 YouCompleteMe.tar.gz 上传至国内的 [七牛云](https://www.qiniu.com/)。我们在国内下载七牛云上面的资源相当快，希望对你有所帮助。
+~~我利用国外的 vps 定时 clone 最新的 YouCompleteMe.git，然后打包，将整个文件 YouCompleteMe.tar.gz 上传至国内的 [七牛云](https://www.qiniu.com/)。我们在国内下载七牛云上面的资源相当快，希望对你有所帮助。~~
+
+由于现在七牛云要求备案域名才能使用他们的服务，所以放弃使用七牛云了（虽然速度很快）。定时拉取最新的 YouCompleteMe.git, 打包整个仓库（包括第三方依赖，排除了.git 文件夹，以此来减小文件大小）。我用阿里云的一个云服务器提供下载服务，速度平易近人，还请见谅。
 
 ## **使用方法**
 ```bash
-$ wget -O ~/YouCompleteMe.tar.gz "http://ohpunyak1.bkt.clouddn.com/YouCompleteMe.tar.gz"
+$ wget -O ~/YouCompleteMe.tar.gz "http://120.78.159.242:8888/YouCompleteMe.tar.gz"
 $ cd ~/.vim/bundle
 $ tar -zxf ~/YouCompleteMe.tar.gz
 ```
-如果你已经下载过一次YouCompleteMe.tar.gz了，然后想要更新压缩文件，运行下面的命令
-```bash
-$ wget -O ~/YouCompleteMe.tar.gz "http://ohpunyak1.bkt.clouddn.com/YouCompleteMe.tar.gz?v=1234"
-```
-这是CDN缓存引起的问题，详见[关于七牛CDN缓存问题的处理方式](http://cnodejs.org/topic/56fc05708265278d59c7e34c)
 
 编译YCM，如果需要对C家族的语言进行语义补全支持（有点耗时）：
 ```bash
@@ -39,22 +36,5 @@ $ ./install.py
 :PlugInstall YouCompleteMe
 ```
 vim 会很快提示你已经安装好 YouCompleteMe 插件。
-
-## 声明
-此 git 仓库的 README.md 文件很少会更新，但是七牛云上面的 YouCompleteMe.tar.gz 会经常更新，确保与 YouCompleteMe 官方git仓库保持一致。
-
-
-我的网络带宽也不算好，但是我测试了一下，下载速度还是相当令人满意：
-```bash
-$ wget http://ohpunyak1.bkt.clouddn.com/YouCompleteMe.tar.gz
---2016-12-06 10:03:31--  http://ohpunyak1.bkt.clouddn.com/YouCompleteMe.tar.gz
-Resolving ohpunyak1.bkt.clouddn.com (ohpunyak1.bkt.clouddn.com)... 117.23.1.26, 125.64.133.135, 182.135.132.138, ...
-Connecting to ohpunyak1.bkt.clouddn.com (ohpunyak1.bkt.clouddn.com)|117.23.1.26|:80... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 143262975 (137M) [application/x-gzip]
-Saving to: ‘YouCompleteMe.tar.gz’
-
-25% [=============>                                         ] 36,639,259  1.89MB/s  eta 44s
-```
 
 Ps: 我只是个大自然和 YouCompleteMe 的搬运工。
