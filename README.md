@@ -14,7 +14,7 @@
 
 ## **使用方法**
 ```bash
-$ wget -O ~/YouCompleteMe.tar.gz "http://120.78.159.242:8888/YouCompleteMe.tar.gz"
+$ wget -O ~/YouCompleteMe.tar.gz "http://106.53.74.248:8888/YouCompleteMe.tar.gz"
 $ cd ~/.vim/bundle
 $ tar -zxf ~/YouCompleteMe.tar.gz
 ```
