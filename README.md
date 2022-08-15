@@ -1,3 +1,5 @@
+## 抱歉，相关服务器已不再提供下载服务
+
 ## 介绍
 之前在刚开始使用Linux系统时，需要配置一个称手的 vim 学习编程。偶然的机会，加入了 细学python QQ群，这个群给了我很多帮助和启发，谢谢。群主 [阿驹](https://github.com/denglj) 做了一个教学视频，推荐我们使用 **[k-vim](https://github.com/wklken/k-vim)**。配置 vim，肯定少不了智能补全插件 [YouCompleteMe](https://github.com/Valloric/YouCompleteMe)，但是国内安装这个插件很慢，很容易安装失败，因为这个插件异常大，超过 200M。我记得很清楚，我安装了两次才成功安装好这个插件，而且耗时很久。我想应该很多人都会遇到这个问题，会很苦恼。
 
@@ -14,7 +16,7 @@
 
 ## **使用方法**
 ```bash
-$ wget -O ~/YouCompleteMe.tar.gz "http://106.53.74.248:8888/YouCompleteMe.tar.gz"
+$ wget -O ~/YouCompleteMe.tar.gz "http://106.53.74.248:8181818/YouCompleteMe.tar.gz"
 $ cd ~/.vim/bundle
 $ tar -zxf ~/YouCompleteMe.tar.gz
 ```
